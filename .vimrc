@@ -124,7 +124,11 @@ set synmaxcol=2048
 
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
-set guifont=Anonymous\ Pro:h14
+if has("mac")
+	set guifont=Anonymous\ Pro:h14
+else
+	set guifont="Droid\\ Sans 8"
+endif
 
 " Set colorscheme to xoria256
 colorscheme xoria256
