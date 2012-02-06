@@ -125,7 +125,8 @@ set synmaxcol=2048
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
 if has("mac")
-	set guifont=Anonymous\ Pro:h14
+	set noantialias
+	set guifont=Terminus\ (TTF):h12
 elseif has("win32")
 	set guifont=Droid_Sans_Mono:h10:cDEFAULT
 else
