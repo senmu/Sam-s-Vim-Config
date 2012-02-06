@@ -129,7 +129,7 @@ if has("mac")
 elseif has("win32")
 	set guifont=Droid_Sans_Mono:h10:cDEFAULT
 else
-	set guifont="Droid\\ Sans 8"
+	set guifont=Terminus\ 8
 endif
 
 " Set colorscheme to xoria256
