@@ -71,6 +71,9 @@ nmap <silent> ,ev :e $MYVIMRC<cr>
 " 's'ource 'v'imrc)
 nmap <silent> ,sv :so $MYVIMRC<cr>
 
+" Allow the use of <esc> to cancel last search highlight
+nnoremap <esc> :noh<return><esc>
+
 " Set the forward slash to be the slash of note.  Backslashes suck
 " This is really only applicable to Windows but I like to have a vimrc
 " that works no matter what OS I'm currently on
@@ -125,8 +128,10 @@ set synmaxcol=2048
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
 if has("mac")
-	set noantialias
-	set guifont=Terminus\ (TTF):h12
+	"set noantialias
+	"set guifont=Terminus\ (TTF):h12
+	set guifont=Menlo:h14
+	"set transparency=15
 elseif has("win32")
 	set guifont=Droid_Sans_Mono:h10:cDEFAULT
 else
@@ -135,3 +140,5 @@ endif
 
 " Set colorscheme to xoria256
 colorscheme xoria256
+
+call pathogen#infect()
