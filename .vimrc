@@ -125,6 +125,8 @@ set complete=.,w,b,t
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 
+let mapleader=","
+
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
 if has("mac")
