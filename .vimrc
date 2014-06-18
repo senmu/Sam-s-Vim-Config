@@ -125,7 +125,13 @@ set complete=.,w,b,t
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 
+" Change the leader key to ','
 let mapleader=","
+
+" Change tab size to 4 spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
@@ -142,5 +148,8 @@ endif
 
 " Set colorscheme to xoria256
 colorscheme xoria256
+
+" Allow navigating between starting and ending HTML tags with '%'
+runtime macros/matchit.vim
 
 call pathogen#infect()
