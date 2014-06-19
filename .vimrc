@@ -146,6 +146,9 @@ else
 	set guifont=Terminus\ 8
 endif
 
+" Set up =j keystroke to pretty-print json
+nmap =j :%!python -m json.tool<CR>
+
 " Set colorscheme to xoria256
 colorscheme xoria256
 
