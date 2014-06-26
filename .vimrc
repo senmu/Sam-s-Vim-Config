@@ -72,7 +72,10 @@ nmap <silent> ,ev :e $MYVIMRC<cr>
 nmap <silent> ,sv :so $MYVIMRC<cr>
 
 " Allow the use of <esc> to cancel last search highlight
-nnoremap <esc> :noh<return><esc>
+" nnoremap <silent> <esc> :noh<return><esc>
+
+" Set up =j keystroke to pretty-print json
+nmap <silent> =j :%!python -m json.tool<CR>
 
 " Set the forward slash to be the slash of note.  Backslashes suck
 " This is really only applicable to Windows but I like to have a vimrc
@@ -145,9 +148,6 @@ elseif has("win32")
 else
 	set guifont=Terminus\ 8
 endif
-
-" Set up =j keystroke to pretty-print json
-nmap =j :%!python -m json.tool<CR>
 
 " Set colorscheme to xoria256
 colorscheme xoria256
