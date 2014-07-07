@@ -141,7 +141,9 @@ set expandtab
 if has("mac")
 	"set noantialias
 	"set guifont=Terminus\ (TTF):h12
-	set guifont=Menlo:h14
+	"set guifont=Menlo:h14
+    set guifont=Menlo\ for\ Powerline:h12
+    let g:airline_powerline_fonts = 1
 	"set transparency=15
 elseif has("win32")
 	set guifont=Droid_Sans_Mono:h10:cDEFAULT
@@ -154,5 +156,8 @@ colorscheme xoria256
 
 " Allow navigating between starting and ending HTML tags with '%'
 runtime macros/matchit.vim
+
+" Airline config
+let g:airline#extensions#tabline#enabled = 1
 
 call pathogen#infect()
