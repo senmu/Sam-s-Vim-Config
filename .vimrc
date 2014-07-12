@@ -1,3 +1,6 @@
+if has("win32") 
+    set runtimepath=~/gvim/Sam-s-Vim-Config/.vim,$VIMRUNTIME,~/gvim/Sam-s-Vim-Config/.vim/after
+endif
 " Forget being compatible with good ol' vi
 set nocompatible
 
@@ -146,7 +149,16 @@ if has("mac")
     let g:airline_powerline_fonts = 1
 	"set transparency=15
 elseif has("win32")
-	set guifont=Droid_Sans_Mono:h10:cDEFAULT
+    set encoding=utf-8
+    set guifont=Consolas_for_Powerline_FixedD:h9
+    let g:airline_symbols = {}
+    let g:airline_left_sep = "\u2b80" "use double quotes here
+    let g:airline_left_alt_sep = "\u2b81"
+    let g:airline_right_sep = "\u2b82"
+    let g:airline_right_alt_sep = "\u2b83"
+    let g:airline_symbols.branch = "\u2b60"
+    let g:airline_symbols.readonly = "\u2b64"
+    let g:airline_symbols.linenr = "\u2b61"
 else
 	set guifont=Terminus\ 8
 endif
