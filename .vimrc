@@ -173,3 +173,6 @@ runtime macros/matchit.vim
 let g:airline#extensions#tabline#enabled = 1
 
 call pathogen#infect()
+
+" Convenient maven build command
+command Makemvn :! cd /Users/samlu/workspace/Xtime/EnrollmentPortal-2.0.0/WebConsole;mvn -DJOB_NAME=Sam -DBUILDNUMBER=2.0.0 install;cp -f /Users/samlu/workspace/Xtime/EnrollmentPortal-2.0.0/WebConsole/target/enroll-2.0.war /Library/Tomcat/webapps/enroll-2.0.war
