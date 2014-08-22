@@ -74,6 +74,10 @@ nmap <silent> ,ev :e $MYVIMRC<cr>
 " 's'ource 'v'imrc)
 nmap <silent> ,sv :so $MYVIMRC<cr>
 
+" Replace word with contents of paste buffer (mnemoic for the key sequence is
+" 'c'hange 'p'aste)
+nmap <silent> cp "_ciw<C-R>"<Esc>
+
 " Allow the use of <esc> to cancel last search highlight
 " nnoremap <silent> <esc> :noh<return><esc>
 
