@@ -12,6 +12,10 @@ filetype indent on
 " Turn on that syntax highlighting
 syntax on
 
+" Appearance
+set background=dark
+set t_Co=256 " 256 colors in terminal
+
 " Why is this not a default
 set hidden
 
@@ -30,6 +34,16 @@ set showfulltag
 
 " Set the textwidth to be 80 chars
 set textwidth=80
+
+" Highlight column 81 and onward (signifying that 80 is the last valid column)
+if exists('+colorcolumn')
+    " (I picked 120-320 because you have to provide an upper bound and 500
+    " seems to be enough.)
+    let &colorcolumn="80,".join(range(120,500),",")
+else
+    " fallback for Vim < v7.3
+    autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 " get rid of the silly characters in separators
 set fillchars = ""
@@ -178,5 +192,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 call pathogen#infect()
 
-" Convenient maven build command
-command Makemvn :! cd /Users/samlu/workspace/Xtime/EnrollmentPortal-2.0.0/WebConsole;mvn -DJOB_NAME=Sam -DBUILDNUMBER=2.0.0 install;cp -f /Users/samlu/workspace/Xtime/EnrollmentPortal-2.0.0/WebConsole/target/enroll-2.0.war /Library/Tomcat/webapps/enroll-2.0.war
+" Set custom highlight color for columns 81 and onward
+highlight ColorColumn ctermbg=246 guibg=#2d2d2d
+
