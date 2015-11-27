@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/swift.vim"]
 	path = .vim/bundle/swift.vim
 	url = git@github.com:Keithbsmiley/swift.vim.git
+[submodule ".vim/bundle/airline-onedark.vim"]
+	path = .vim/bundle/airline-onedark.vim
+	url = git@github.com:joshdick/airline-onedark.vim.git
