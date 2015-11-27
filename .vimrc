@@ -181,8 +181,8 @@ else
 	set guifont=Terminus\ 8
 endif
 
-" Set colorscheme to xoria256
-colorscheme xoria256
+" Set colorscheme to onedark
+colorscheme onedark
 
 " Allow navigating between starting and ending HTML tags with '%'
 runtime macros/matchit.vim
