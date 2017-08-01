@@ -7,3 +7,8 @@
 Session.vim
 .netrwhist
 *~
+
+# Ignore contents of vim undodir
+.vim/undodir/*
+!.vim/undodir/.keep
+

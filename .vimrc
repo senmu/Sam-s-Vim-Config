@@ -157,6 +157,12 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Create an undo file to maintain history between sessions
+set undofile
+" Use one, common directory to store all undo history files, rather than the
+" same directory as the file that's currently being edited
+set undodir=~/.vim/undodir
+
 " Set the font to Monaco, 12pt
 " set guifont=Monaco:h12
 if has("mac")
