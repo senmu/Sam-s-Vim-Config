@@ -28,9 +28,9 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule ".vim/bundle/swift.vim"]
-	path = .vim/bundle/swift.vim
-	url = git@github.com:Keithbsmiley/swift.vim.git
 [submodule ".vim/bundle/airline-onedark.vim"]
 	path = .vim/bundle/airline-onedark.vim
 	url = git@github.com:joshdick/airline-onedark.vim.git
+[submodule ".vim/bundle/swift-apple"]
+	path = .vim/bundle/swift-apple
+	url = git@github.com:jph00/swift-apple.git
